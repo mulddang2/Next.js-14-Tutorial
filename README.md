@@ -10,5 +10,10 @@
 >
 > npm run dev
 
+----
 
-
+### 4. 실행 시, 동작 과정
+- npm run dev 실행 하면, 실행이 <b>layout으로 전달</b>
+- layout파일 안에, RootLayout컴포넌트가 localhost 3000으로 탐색할 때 렌더링된다.
+- layout 파일 내 children prop은 항상 page 파일에 정의된 컴포넌트를 참조한다.
+- app 안에 Home 컴포넌트는 package.json에서 레이아웃까지의 제어흐름인 브라우저에서 렌더링된다.
