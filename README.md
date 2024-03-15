@@ -31,11 +31,14 @@
 
 ### 6. Catch-all Segments & Optional Catch-all Segments
 
-- Catch-all Segments?
+- Catch-all Segments?<br/>
   대괄호 [...segmentName] 안에 줄임표를 추가하면 동적 세그먼트를 모든 후속 세그먼트로 확장할 수 있습니다. (ex. [...slug])
 
-Optional Catch-all Segments
+- Optional Catch-all Segments?<br /> 이중대괄호 안에 매개변수를 포함하여 포괄 세그먼트를 선택적으로 만들 수 있습니다. (ex. [[...slug]])
 
-- 이중대괄호 안에 매개변수를 포함하여 포괄 세그먼트를 선택적으로 만들 수 있습니다. (ex. [[...slug]])
+- 위 둘의 차이점: <br />이중대괄호는 매개변수가 없는 경로도 일치한다(ex. [...slug] 이렇게만 할 경우, /docs/feature/1 로 URL 입력했을 때는 확장되는데, 막상 /docs로 입력하면 경로 연결이 안됨. 그래서 이중대괄호를 하면 해결이 된다.)
 
-- 위 둘의 차이점: 이중대괄호는 매개변수가 없는 경로도 일치한다(ex. [...slug] 이렇게만 할 경우, /docs/feature/1 로 URL 입력했을 때는 확장되는데, 막상 /docs로 입력하면 경로 연결이 안됨. 그래서 이중대괄호를 하면 해결이 된다.)
+### 7. Not Found Page
+- Next.js는 기본적으로, 없는 경로여도 액세스한다. 
+- not-found 페이지를 가장 루트에 만들 수도 있고, 폴더 안에 만들 수도 있다. 
+- ex. 리뷰 폴더 안에 notFound 페이지를 만들고, 리뷰가 1000개 보다 많으면 리뷰용 notFound 페이지를 띄울 수도 있다.👏👏
