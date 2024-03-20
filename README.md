@@ -86,5 +86,24 @@
   - 원하는 Url 폴더 안에 layout파일을 추가한다. 그리고 page 파일에서 children을 받는다.
 
   ### 13. Route Group Layout
+
   - (폴더이름) 폴더 안에 담겨진 것 안에도 고정 layout을 만들 수 있다.
   - 하지만, 비밀번호 찾기와 같은 부분은 레이아웃을 공유하지 않는 것이 좋다.
+
+  ### 14. Routing Metadata
+
+  - layout과 page 모두 metadata를 가질 수 있지만, 둘 다 있는 경우 page metadata가 우선한다.
+  - 정적 메타데이터: 더 하위에 있는 메타데이터가 항목을 덮어쓸 수 있다. 모든 정보가 동일함.
+  - 동적 메타데이터: [productId]와 같은 동적 경로에서 대표적으로 쓰인다. 각 제품에 대해 고유한 제목을 가지도록 할 수 있다. 비동기로도 가능하다.
+
+  ### 15. title Metadata (SEO 향상을 위해 필요한 부분)
+
+  ```
+  export const metadata: Metadata = {
+  title: {
+    absolute: '', // 제목을 완전히 무시하는 제목 제공하고 싶을 때
+    default: '아무것도 지정하지 않을 때, 뜨는 기본 제목', // 제목을 명시적으로 지정하지 않은 하위 경로에 대한 기본 제목!!!!
+    template: '%s | Suzy', // 동적으로 생성가능함
+  },
+  };
+  ```
