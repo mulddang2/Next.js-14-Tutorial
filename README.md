@@ -79,3 +79,12 @@
 
   - 레이아웃은 빌드할 때, 앱의 여러 페이지간에 공유되는 UI이다. (header, footer)와 같이 어느 페이지를 가든 똑같은 것
   - 가장 최상위에 있는 layout.tsx는 지워도 자동으로 생김
+
+  ### 12. Nested Layouts
+
+  - Header, Footer 외에 특정 layout을 반복하고 싶을 때 사용
+  - 원하는 Url 폴더 안에 layout파일을 추가한다. 그리고 page 파일에서 children을 받는다.
+
+  ### 13. Route Group Layout
+  - (폴더이름) 폴더 안에 담겨진 것 안에도 고정 layout을 만들 수 있다.
+  - 하지만, 비밀번호 찾기와 같은 부분은 레이아웃을 공유하지 않는 것이 좋다.
